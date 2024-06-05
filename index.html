@@ -1,0 +1,11 @@
+<script>
+    document.getElementById('mark-attendance').addEventListener('click', () => {
+        fetch('https://your-render-app.onrender.com/hadir.php', { method: 'POST', credentials: 'include' })
+            .then(response => response.text())
+            .then(data => alert(data));
+    });
+
+    document.getElementById('export-data').addEventListener('click', () => {
+        window.location.href = 'https://your-render-app.onrender.com/export.php';
+    });
+</script>
